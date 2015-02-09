@@ -2,7 +2,7 @@ import React from 'react';
 
 var TestComponent = React.createClass({
 	render: function() {
-		return <div>This is a test component</div>;
+		return <div className="ui basic button"><i className="icon user"></i>Test React Component!</div>;
 	}
 });
 

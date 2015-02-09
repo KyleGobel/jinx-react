@@ -2,6 +2,7 @@
   "jspm": {
     "name": "Jinx-React",
     "dependencies": {
+      "Semantic-Ui": "github:Semantic-Org/Semantic-Ui@^1.8.1",
       "bootstrap": "^3.3.1",
       "react": "^0.12.2"
     }

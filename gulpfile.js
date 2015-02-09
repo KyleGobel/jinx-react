@@ -89,6 +89,15 @@ gulp.task('serve', ['browser-sync', 'jsx', 'sass', 'js-to-build'] , function(cb)
       gulp.start('jsx');
     }
   );
+
+  plugins.watch(
+    './src/js/**/*.jsx',
+    {
+      name: 'JSX'
+    },
+    function() {
+      gulp.start('jsx');
+    }    );
 });
 
 // Delete build Directory

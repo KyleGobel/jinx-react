@@ -37,7 +37,7 @@ gulp.task('browser-sync', function() {
 
 // JSX
 gulp.task('jsx', function() {
-  return gulp.src('src/**/*.js')
+  return gulp.src('src/**/*.jsx')
     .pipe(plugins.cached('jsx'))  //Process only changed files
     .pipe(plugins.react())
     .pipe(gulp.dest('build/'));

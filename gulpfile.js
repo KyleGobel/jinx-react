@@ -147,6 +147,8 @@ gulp.task('uglify', function() {
     .on('error', plugins.util.log);
 });
 
+//ehh since i don't know how to use gulp, we'll have to manually change some dirs in the index file for 
+//the dist files to work
 gulp.task('dist', function() {
   runSequence(
     'delete-dist',

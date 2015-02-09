@@ -37,8 +37,16 @@ gulp.task('browser-sync', function() {
 
 // JSX
 gulp.task('jsx', function() {
-  return gulp.src('src/**/*.jsx')
+  return gulp.src('src/**/*.js')
     .pipe(plugins.cached('jsx'))  //Process only changed files
+    .pipe(plugins.react())
+    .pipe(gulp.dest('build/'));
+});
+
+//move js to build
+gulp.task('js-to-build', function() {
+  return gulp.src('src/**/*.js')
+    .pipe(plugins.cached('jsx'))
     .pipe(plugins.react())
     .pipe(gulp.dest('build/'));
 });
@@ -60,7 +68,7 @@ gulp.task('sass', function() {
 });
 
 // serve task
-gulp.task('serve', ['browser-sync', 'jsx', 'sass'] , function(cb) {
+gulp.task('serve', ['browser-sync', 'jsx', 'sass', 'js-to-build'] , function(cb) {
 
   plugins.watch(
     './src/sass/**/*.scss',

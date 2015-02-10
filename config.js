@@ -11,7 +11,9 @@ System.config({
 System.config({
   "map": {
     "Semantic-Ui": "github:Semantic-Org/Semantic-Ui@1.8.1",
+    "ace": "github:ajaxorg/ace-builds@1.1.8",
     "bootstrap": "github:twbs/bootstrap@3.3.2",
+    "codemirror": "github:codemirror/codemirror@4.12.0",
     "react": "npm:react@0.12.2",
     "github:jspm/nodelibs-buffer@0.1.0": {
       "buffer": "npm:buffer@3.0.1"

@@ -86,7 +86,7 @@ gulp.task('serve', ['browser-sync', 'jsx', 'sass', 'js-to-build'] , function(cb)
       name: 'JS'
     },
     function() {
-      gulp.start('jsx');
+      gulp.start('js-to-build');
     }
   );
 

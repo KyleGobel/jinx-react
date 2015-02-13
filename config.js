@@ -13,7 +13,10 @@ System.config({
     "Semantic-Ui": "github:Semantic-Org/Semantic-Ui@1.8.1",
     "ace": "github:ajaxorg/ace-builds@1.1.8",
     "bootstrap": "github:twbs/bootstrap@3.3.2",
-    "codemirror": "github:codemirror/codemirror@4.12.0",
+    "codemirror": "npm:codemirror@4.12.0",
+    "jquery": "github:components/jquery@2.1.3",
+    "lodash": "npm:lodash@3.1.0",
+    "lodash-node": "npm:lodash-node@3.1.0",
     "react": "npm:react@0.12.2",
     "github:jspm/nodelibs-buffer@0.1.0": {
       "buffer": "npm:buffer@3.0.1"
@@ -48,6 +51,10 @@ System.config({
       "ieee754": "npm:ieee754@1.1.4",
       "is-array": "npm:is-array@1.0.1"
     },
+    "npm:codemirror@4.12.0": {
+      "buffer": "github:jspm/nodelibs-buffer@0.1.0",
+      "process": "github:jspm/nodelibs-process@0.1.1"
+    },
     "npm:core-util-is@1.0.1": {
       "buffer": "github:jspm/nodelibs-buffer@0.1.0"
     },
@@ -72,6 +79,12 @@ System.config({
       "esprima-fb": "npm:esprima-fb@7001.1.0-dev-harmony-fb",
       "process": "github:jspm/nodelibs-process@0.1.1",
       "source-map": "npm:source-map@0.1.31"
+    },
+    "npm:lodash-node@3.1.0": {
+      "process": "github:jspm/nodelibs-process@0.1.1"
+    },
+    "npm:lodash@3.1.0": {
+      "process": "github:jspm/nodelibs-process@0.1.1"
     },
     "npm:path-browserify@0.0.0": {
       "process": "github:jspm/nodelibs-process@0.1.1"

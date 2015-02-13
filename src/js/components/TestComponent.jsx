@@ -1,5 +1,4 @@
 import React from 'react';
-import Ace from 'ace';
 
 var TestComponent = React.createClass({
 	render: function() {

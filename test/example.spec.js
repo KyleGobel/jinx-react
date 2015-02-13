@@ -1,7 +1,7 @@
 'use strict';
 
 import React from 'react';
-import Ace from 'ace';
+import CodeMirror from 'codemirror';
 import TestComponent from '../build/js/components/TestComponent';
 
 describe('Test Component Test Suite', function() {
@@ -12,7 +12,8 @@ describe('Test Component Test Suite', function() {
 
 describe('Ace tests', function() {
 	it('should exist', function() {
-		console.log(ace);
-		expect(Ace).to.not.be.undefined;
+		console.log(CodeMirror);
+		expect(CodeMirror).to.not.be.undefined;
+
 	});
 });

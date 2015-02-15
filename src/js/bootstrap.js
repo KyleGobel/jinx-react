@@ -6,9 +6,7 @@ import React from 'react';
 import SqlEditor from './components/SqlEditor';
 
 function initalizeSqlEditor() {
-	React.render(<SqlEditor id='editor'>{'\n'}--this is sql
-		SELECT user_id, user_name FROM users WHERE id = 1
-	</SqlEditor>, 
+	React.render(<SqlEditor sourceDomId='someSql' id='editor'/>,
 		document.getElementById('app'));
 }
 

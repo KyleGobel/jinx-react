@@ -1,3 +1,22 @@
+/******
+* SqlEditor Component
+* 
+* Usage
+* <SqlEditor id='editor' sourceDomId='sql' />
+* 
+* Attributes
+* id 
+* ****
+* this will be used internally as the id of the textarea that the code mirror
+* sql window is created out of
+* 
+* sourceDomId 
+* ****
+*  this is the dom element that the editor will read the sql out of it and populate
+* into the editor, it will also be hidden automatically
+******/
+
+
 'use strict';
 
 import React from 'react';
@@ -15,7 +34,7 @@ var SqlEditor = React.createClass({
 			);
 	},
 	initializeCodeMirror: function() {
-		console.log(this.props.children);
+		var el = document.getElementById(this.props.sourceDomId);
 		var editor = CodeMirror.fromTextArea(document.getElementById(this.props.id), {
 			lineNumbers: true,
 			theme: 'solarized',
@@ -23,8 +42,11 @@ var SqlEditor = React.createClass({
 			mode: 'sql',
 			showCursorWhenSelecting: true
 		});
-		editor.setValue(this.props.children);
-
+		if (typeof el !== "undefined")
+		{
+			el.style.display = 'none';
+			editor.setValue(el.innerHTML.trim());
+		}
 	},
 	componentDidMount: function() {
 		this.initializeCodeMirror();	
